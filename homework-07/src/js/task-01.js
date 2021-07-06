@@ -8,5 +8,3 @@ mainListNumber.forEach(
         console.log("Количество элементов: ", item.querySelectorAll('li').length);   
     }
 );
-
-
