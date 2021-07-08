@@ -15,3 +15,5 @@ ingredients.forEach (elem => {
   mainElem.appendChild(el);
 }
   );
+
+  // mainElem.childNodes = document.createElement('li');
