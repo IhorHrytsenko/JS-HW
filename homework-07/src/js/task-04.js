@@ -1,8 +1,18 @@
 const number = document.querySelector('span');
 const changeNumber = document.querySelectorAll('button')
 
-const decrement = changeNumber[0];
-const increment = changeNumber[1];
+
+let decrement;
+let increment;
+
+const findButton = changeNumber.forEach((elem, index) => {
+    if (elem.dataset.action === "decrement"){
+        decrement = changeNumber[index];
+    }
+    if (elem.dataset.action === "increment"){
+        increment = changeNumber[index];
+    } 
+})
 
 decrement.addEventListener ('click', (changeNumber) => {
      number.textContent = Number(number.textContent) - 1} 
@@ -11,9 +21,3 @@ decrement.addEventListener ('click', (changeNumber) => {
 increment.addEventListener ('click', (changeNumber) => {
     number.textContent = Number(number.textContent) + 1} 
 )
-
-
-
-
-
-
