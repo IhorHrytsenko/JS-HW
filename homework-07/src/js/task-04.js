@@ -5,7 +5,7 @@ const changeNumber = document.querySelectorAll('button')
 let decrement;
 let increment;
 
-const findButton = changeNumber.forEach((elem, index) => {
+changeNumber.forEach((elem, index) => {
     if (elem.dataset.action === "decrement"){
         decrement = changeNumber[index];
     }
