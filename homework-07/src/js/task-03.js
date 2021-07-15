@@ -13,11 +13,12 @@ const images = [
   },
 ];
 
-
+const imageEl = [];
 const listGallery = document.querySelector('#gallery');
 listGallery.classList.toggle('list--gallery');
 
 images.forEach(elem => 
-  listGallery.insertAdjacentHTML('afterbegin', `<li><img src = ${elem.url} alt = ${elem.alt} ></li>`)
+  imageEl.push(`<li><img src = ${elem.url} alt = ${elem.alt} ></li>`)
   )
 
+  listGallery.insertAdjacentHTML('afterbegin', ...imageEl);
