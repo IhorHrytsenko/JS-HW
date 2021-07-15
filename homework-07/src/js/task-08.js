@@ -2,18 +2,9 @@ const buttons = document.querySelectorAll('button');
 const mainDiv = document.querySelector('#boxes');
 const input = document.querySelector('input');
 
-let renderButton;
-let destroyButton;
+let renderButton = document.querySelector('button[data-action=render]');
 
-buttons.forEach((elem, index) => {
-    if (elem.dataset.action === "render"){
-        renderButton = buttons[index];
-
-    }
-    if (elem.dataset.action === "destroy"){
-        destroyButton = buttons[index];
-    } 
-})
+let destroyButton = document.querySelector('button[data-action=destroy]');
 
 renderButton.addEventListener('click', () => onClickCreateElement(Number(input.value)));
 
