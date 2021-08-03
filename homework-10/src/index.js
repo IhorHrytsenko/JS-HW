@@ -4,7 +4,15 @@ import templateHTML from '/templates/cardTemplate.hbs'
 
 const menuItem = jsonText;
 
-// console.log(menuItem);
+const Theme = {
+    LIGHT: 'light-theme',
+    DARK: 'dark-theme',
+  };
+
+const checkTheme = document.querySelector(".theme-switch__toggle");  
+const bodyTag = document.querySelector('body');
+  
+const mainList = document.querySelector(".js-menu");
 
 function createHTML(temps) {
 return templateHTML(temps);
@@ -12,7 +20,33 @@ return templateHTML(temps);
 
 const resultTemplate = createHTML(menuItem);
 
-// console.log(resultTemplate);
-
-const mainList = document.querySelector(".js-menu");
 mainList.insertAdjacentHTML("afterbegin", resultTemplate);
+
+checkTheme.addEventListener('click', () => { 
+    if (checkTheme.checked === true){
+        bodyTag.classList.remove(Theme.LIGHT);
+        bodyTag.classList.add(Theme.DARK);
+        localStorage.setItem('CheckDark', true);
+        checkTheme.setAttribute("checked" , true);
+    } 
+    else {
+        bodyTag.classList.remove(Theme.DARK);
+        bodyTag.classList.add(Theme.LIGHT);
+        localStorage.setItem('CheckDark', false);
+        checkTheme.setAttribute("checked" , false);
+    }
+});
+
+function loadTheme(){
+    if (localStorage.getItem('CheckDark') === "true"){
+            checkTheme.checked = true;
+            bodyTag.classList.remove(Theme.LIGHT);
+            bodyTag.classList.add(Theme.DARK);
+        } 
+        else {
+            bodyTag.classList.remove(Theme.DARK);
+            bodyTag.classList.add(Theme.LIGHT);
+            checkTheme.checked = false;
+        }
+}
+loadTheme();
