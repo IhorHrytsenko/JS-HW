@@ -3,20 +3,20 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://IhorHrytsenko.github.io/JS-HW",
+  "homepage": "https://IhorHrytsenko.github.io/JS-HW/homework-10",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /JS-HW/"
+    "build": "parcel build src/*.html --public-url /JS-HW/homework-10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://IhorHrytsenko.github.io/JS-HW.git"
+    "url": "git+https://IhorHrytsenko.github.io/JS-HW/homework-10.git"
   },
   "keywords": [],
   "author": "Ihor Hrytsenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://IhorHrytsenko.github.io/JS-HW"
+    "url": "https://IhorHrytsenko.github.io/JS-HW/homework-10"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
