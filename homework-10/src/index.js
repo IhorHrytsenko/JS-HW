@@ -1,4 +1,4 @@
-import './sass/main.scss';
+// import './sass/main.scss';
 import jsonText from './menu.json';
 import templateHTML from '/templates/cardTemplate.hbs'
 
